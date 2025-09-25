@@ -37,8 +37,8 @@
             bnAceptar = new Button();
             BtnCancelar = new Button();
             panel1 = new Panel();
+            cmbModulo = new ComboBox();
             lblLogin = new Label();
-            lstModulo = new DomainUpDown();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,7 +75,9 @@
             // txtUsuario
             // 
             txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.ForeColor = SystemColors.MenuHighlight;
             txtUsuario.Location = new Point(168, 86);
+            txtUsuario.MaxLength = 10;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(100, 23);
             txtUsuario.TabIndex = 3;
@@ -85,7 +87,9 @@
             txtContraseña.BorderStyle = BorderStyle.FixedSingle;
             txtContraseña.ForeColor = SystemColors.MenuHighlight;
             txtContraseña.Location = new Point(168, 129);
+            txtContraseña.MaxLength = 10;
             txtContraseña.Name = "txtContraseña";
+            txtContraseña.PasswordChar = '#';
             txtContraseña.Size = new Size(100, 23);
             txtContraseña.TabIndex = 4;
             // 
@@ -100,6 +104,7 @@
             bnAceptar.TabIndex = 6;
             bnAceptar.Text = "Aceptar";
             bnAceptar.UseVisualStyleBackColor = false;
+            bnAceptar.Click += bnAceptar_Click;
             // 
             // BtnCancelar
             // 
@@ -110,15 +115,25 @@
             BtnCancelar.TabIndex = 7;
             BtnCancelar.Text = "Cancelar";
             BtnCancelar.UseVisualStyleBackColor = true;
+            BtnCancelar.Click += BtnCancelar_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.AntiqueWhite;
-            panel1.Controls.Add(lstModulo);
+            panel1.Controls.Add(cmbModulo);
             panel1.Location = new Point(66, 49);
             panel1.Name = "panel1";
             panel1.Size = new Size(492, 214);
             panel1.TabIndex = 8;
+            // 
+            // cmbModulo
+            // 
+            cmbModulo.FormattingEnabled = true;
+            cmbModulo.Items.AddRange(new object[] { "ADM", "SIST", "COM", "VTA" });
+            cmbModulo.Location = new Point(102, 128);
+            cmbModulo.Name = "cmbModulo";
+            cmbModulo.Size = new Size(121, 23);
+            cmbModulo.TabIndex = 10;
             // 
             // lblLogin
             // 
@@ -131,20 +146,12 @@
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Login";
             // 
-            // lstModulo
-            // 
-            lstModulo.BorderStyle = BorderStyle.FixedSingle;
-            lstModulo.Location = new Point(102, 130);
-            lstModulo.Name = "lstModulo";
-            lstModulo.Size = new Size(120, 23);
-            lstModulo.TabIndex = 9;
-            // 
             // frmSintepart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Snow;
-            ClientSize = new Size(669, 371);
+            ClientSize = new Size(623, 317);
             Controls.Add(lblLogin);
             Controls.Add(BtnCancelar);
             Controls.Add(bnAceptar);
@@ -175,6 +182,6 @@
         private Button BtnCancelar;
         private Panel panel1;
         private Label lblLogin;
-        private DomainUpDown lstModulo;
+        private ComboBox cmbModulo;
     }
 }

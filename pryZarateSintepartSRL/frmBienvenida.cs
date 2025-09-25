@@ -16,5 +16,11 @@ namespace pryZarateSintepartSRL
         {
             InitializeComponent();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            frmSintepart login = new frmSintepart();
+            login.ShowDialog();
+        }
     }
 }

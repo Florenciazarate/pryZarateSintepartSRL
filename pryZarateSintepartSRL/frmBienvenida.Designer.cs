@@ -47,14 +47,15 @@
             // 
             // btnIngresar
             // 
-            btnIngresar.BackColor = Color.PeachPuff;
-            btnIngresar.Font = new Font("Nirmala Text", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIngresar.Location = new Point(252, 147);
+            btnIngresar.BackColor = Color.Bisque;
+            btnIngresar.Font = new Font("Nirmala Text", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnIngresar.Location = new Point(248, 133);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(75, 29);
+            btnIngresar.Size = new Size(88, 36);
             btnIngresar.TabIndex = 1;
             btnIngresar.Text = "Ingresar";
             btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // lblIngresarSistema
             // 
@@ -86,7 +87,6 @@
             Controls.Add(lblIngresarSistema);
             Controls.Add(btnIngresar);
             Controls.Add(lblBienenido);
-            Cursor = Cursors.Default;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBienvenida";
