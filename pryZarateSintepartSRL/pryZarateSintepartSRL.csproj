@@ -8,8 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Siticone.NetFramework.UI" Version="2025.8.27" />
-  </ItemGroup>
-
 </Project>

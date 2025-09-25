@@ -29,21 +29,152 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSintepart));
+            lblUsuario = new Label();
+            lblContraseña = new Label();
+            lblModulo = new Label();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
+            bnAceptar = new Button();
+            BtnCancelar = new Button();
+            panel1 = new Panel();
+            lblLogin = new Label();
+            lstModulo = new DomainUpDown();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Nirmala UI", 11.25F);
+            lblUsuario.Location = new Point(79, 88);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(59, 20);
+            lblUsuario.TabIndex = 0;
+            lblUsuario.Text = "Usuario";
+            // 
+            // lblContraseña
+            // 
+            lblContraseña.AutoSize = true;
+            lblContraseña.Font = new Font("Nirmala UI", 11.25F);
+            lblContraseña.Location = new Point(79, 129);
+            lblContraseña.Name = "lblContraseña";
+            lblContraseña.Size = new Size(83, 20);
+            lblContraseña.TabIndex = 1;
+            lblContraseña.Text = "Contraseña";
+            // 
+            // lblModulo
+            // 
+            lblModulo.AutoSize = true;
+            lblModulo.Font = new Font("Nirmala UI", 11.25F);
+            lblModulo.Location = new Point(80, 180);
+            lblModulo.Name = "lblModulo";
+            lblModulo.Size = new Size(61, 20);
+            lblModulo.TabIndex = 2;
+            lblModulo.Text = "Modulo";
+            // 
+            // txtUsuario
+            // 
+            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.Location = new Point(168, 86);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(100, 23);
+            txtUsuario.TabIndex = 3;
+            // 
+            // txtContraseña
+            // 
+            txtContraseña.BorderStyle = BorderStyle.FixedSingle;
+            txtContraseña.ForeColor = SystemColors.MenuHighlight;
+            txtContraseña.Location = new Point(168, 129);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(100, 23);
+            txtContraseña.TabIndex = 4;
+            // 
+            // bnAceptar
+            // 
+            bnAceptar.BackColor = Color.Tan;
+            bnAceptar.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bnAceptar.ForeColor = SystemColors.ActiveCaptionText;
+            bnAceptar.Location = new Point(359, 88);
+            bnAceptar.Name = "bnAceptar";
+            bnAceptar.Size = new Size(106, 38);
+            bnAceptar.TabIndex = 6;
+            bnAceptar.Text = "Aceptar";
+            bnAceptar.UseVisualStyleBackColor = false;
+            // 
+            // BtnCancelar
+            // 
+            BtnCancelar.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnCancelar.Location = new Point(359, 153);
+            BtnCancelar.Name = "BtnCancelar";
+            BtnCancelar.Size = new Size(106, 38);
+            BtnCancelar.TabIndex = 7;
+            BtnCancelar.Text = "Cancelar";
+            BtnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.AntiqueWhite;
+            panel1.Controls.Add(lstModulo);
+            panel1.Location = new Point(66, 49);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(492, 214);
+            panel1.TabIndex = 8;
+            // 
+            // lblLogin
+            // 
+            lblLogin.AutoSize = true;
+            lblLogin.BackColor = Color.AntiqueWhite;
+            lblLogin.Font = new Font("Nirmala UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLogin.Location = new Point(77, 35);
+            lblLogin.Name = "lblLogin";
+            lblLogin.Size = new Size(59, 25);
+            lblLogin.TabIndex = 0;
+            lblLogin.Text = "Login";
+            // 
+            // lstModulo
+            // 
+            lstModulo.BorderStyle = BorderStyle.FixedSingle;
+            lstModulo.Location = new Point(102, 130);
+            lstModulo.Name = "lstModulo";
+            lstModulo.Size = new Size(120, 23);
+            lstModulo.TabIndex = 9;
             // 
             // frmSintepart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Snow;
+            ClientSize = new Size(669, 371);
+            Controls.Add(lblLogin);
+            Controls.Add(BtnCancelar);
+            Controls.Add(bnAceptar);
+            Controls.Add(txtContraseña);
+            Controls.Add(txtUsuario);
+            Controls.Add(lblModulo);
+            Controls.Add(lblContraseña);
+            Controls.Add(lblUsuario);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmSintepart";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sintepart";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblUsuario;
+        private Label lblContraseña;
+        private Label lblModulo;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
+        private Button bnAceptar;
+        private Button BtnCancelar;
+        private Panel panel1;
+        private Label lblLogin;
+        private DomainUpDown lstModulo;
     }
 }

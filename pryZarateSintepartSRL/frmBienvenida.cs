@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace pryZarateSintepartSRL
 {
-    public partial class frmSintepart : Form
+    public partial class frmBienvenida : Form
     {
-        public frmSintepart()
+        public frmBienvenida()
         {
             InitializeComponent();
         }
-
-
     }
 }
