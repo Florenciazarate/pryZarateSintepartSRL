@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>3406421-animal-lazy-mammal-sloth-slow-wildlife-zoo_107592.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="3406421-animal-lazy-mammal-sloth-slow-wildlife-zoo_107592.ico" />
+  </ItemGroup>
 
 </Project>
