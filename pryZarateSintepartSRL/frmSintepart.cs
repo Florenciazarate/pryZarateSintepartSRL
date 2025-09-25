@@ -13,6 +13,8 @@ namespace pryZarateSintepartSRL
 {
     public partial class frmSintepart : Form
     {
+        int intentos = 0;
+
         public frmSintepart()
         {
             InitializeComponent();
@@ -34,7 +36,8 @@ namespace pryZarateSintepartSRL
                     this.Hide();
                     frmBienvenida.Show();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("No tiene acceso a este módulo");
                 }
             }
@@ -45,7 +48,8 @@ namespace pryZarateSintepartSRL
                     this.Hide();
                     frmBienvenida.Show();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("No tiene acceso a este módulo");
                 }
             }
@@ -56,19 +60,26 @@ namespace pryZarateSintepartSRL
                     this.Hide();
                     frmBienvenida.Show();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("No tiene acceso a este módulo");
                 }
             }
             else if (txtUsuario.Text == "God" && txtContraseña.Text == "@#4d")
-                {
+            {
                 this.Hide();
                 frmBienvenida.Show();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
+                intentos++;
+                if (intentos >= 2)
+                {
+                    Application.Exit();
+                }
+
             }
-            }
+        }
     }
 }
